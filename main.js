@@ -26,3 +26,4 @@ bot.on('message', message => {
 });
 
 bot.login(config.token);
+//this is a test
