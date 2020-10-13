@@ -4,4 +4,5 @@ module.exports = {
   Trivia: require('./trivia'),
   Answer: require('./answer'),
   Alerts: require('./alerts'),
+  Man: require('./man')
 };
