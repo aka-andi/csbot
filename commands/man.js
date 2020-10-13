@@ -7,7 +7,7 @@ module.exports = {
                 title: "TARS Commands",
                 fields: [{
                     name: "!problem",
-                    value: "Get a random coding interview question from LeetCode."
+                    value: "Get a random coding interview problem from LeetCode."
                 },
                 {
                     name: "!solution",
