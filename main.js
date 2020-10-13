@@ -20,10 +20,10 @@ client.on('message', message =>{
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    if(command === 'ping'){
-        client.commands.get('ping').execute(message, args);
-    } else if (command === 'youtube'){
-        message.channel.send('https://www.youtube.com');
+    if((command === 'problem') || (command === 'p')){
+        client.commands.get('problem').execute(message, args);
+    } else if ((command === 'solution') || (command === 's')){
+        client.commands.get('solution').execute(message, args);
     }
     
 });
