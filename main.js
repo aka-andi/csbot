@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
-
 const client = new Discord.Client();
+const config = require('./config.json');
 
-const prefix = '-';  //prefix
+const prefix = config.prefix;
 
 client.once('ready', () => {
     console.log('bot is online!');
@@ -15,11 +15,11 @@ client.on('message', message =>{    // message from bot
     const command = args.shift().toLowerCase();
 
     if(command === 'ping'){
-        message.channel.send('pong');
+        message.channel.send('pang');
     } else if (command == 'youtube'){
         message.channel.send('https://www.youtube.com');
     }
     // use elif for more commands...
 });
 
-client.login('NzU1NTY5ODM2OTc3MDI5MjEx.X2FNPg.Sh69gAmBopWRz8KYsggJXrV5Nbc');
+client.login(config.token);

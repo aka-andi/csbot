@@ -1,0 +1,22 @@
+{
+  "name": "csbot",
+  "version": "1.0.0",
+  "description": "CS321 Team 8 project",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aka-andi/csbot.git"
+  },
+  "author": "Brenda Henriquez, Andi Motas, Firaol Tolessa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aka-andi/csbot/issues"
+  },
+  "homepage": "https://github.com/aka-andi/csbot#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
+}
