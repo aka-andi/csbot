@@ -25,4 +25,4 @@ bot.on('message', message => {
 });
 
 bot.login(config.token);
-//test 1 2 3 gkjghkmgmj
+//test 1 2 3 
