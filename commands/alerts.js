@@ -1,8 +1,10 @@
+var alertsOn = true;
 module.exports = {
     name: 'alerts',
     description: "alert command",
     execute(message, args) {
-        message.channel.send('This command toggles if the career opportunity' +
-            'alerts are on or off.');
+        alertsOn = (alertsOn == true) ? false : true;
+        var status = (alertsOn) ? 'ON' : 'OFF';
+        message.channel.send('Career opportunity alerts are now ' + status);
     }
 }

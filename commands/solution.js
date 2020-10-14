@@ -1,8 +1,21 @@
 module.exports = {
     name: 'solution',
     description: "solution command",
-    execute(message, args){
-        message.channel.send('This command returns a link to ' +
-        'the solution for the last sent LeetCode problem.');
+    execute(message, args) {
+        const problem = require('./problem.js')
+        if (problem.solution != undefined) {
+            message.channel.send({
+                embed: {
+                    title: "Coding Interview Practice!",
+                    fields: [{
+                        name: problem.name,
+                        value: '[View Solution](' + problem.solution + ')'
+                    }]
+                }
+            });
+        }
+        else {
+            message.reply('No coding problem has been given yet.');
+        }
     }
 }
