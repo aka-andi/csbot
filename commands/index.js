@@ -4,5 +4,6 @@ module.exports = {
   Trivia: require('./trivia'),
   Answer: require('./answer'),
   Alerts: require('./alerts'),
-  Man: require('./man')
+  Man: require('./man'),
+  Opportunities: require('./opportunities') // temp, only for screen mockups
 };

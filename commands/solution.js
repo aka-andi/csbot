@@ -7,10 +7,7 @@ module.exports = {
             message.channel.send({
                 embed: {
                     title: "Coding Interview Practice!",
-                    fields: [{
-                        name: problem.name,
-                        value: '[View Solution](' + problem.solution + ')'
-                    }]
+                    description: '[View Solution for ' + problem.name + '](' + problem.solution + ')'
                 }
             });
         }
