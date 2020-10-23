@@ -5,5 +5,4 @@ module.exports = {
   Answer: require('./answer'),
   Alerts: require('./alerts'),
   Man: require('./man'),
-  Opportunities: require('./opportunities') // temp, only for screen mockups
 };
