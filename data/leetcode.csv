@@ -1,0 +1,818 @@
+name,problem,link,solution
+Two Sum,"Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+ You may assume that each input would have exactly one solution, and you may not use the same element twice.
+ You can return the answer in any order.
+ Example 1:
+ Input: nums = [2,7,11,15], target = 9
+ Output: [0,1]
+ Output: Because nums[0] + nums[1] == 9, we return [0, 1].
+ Example 2:
+ Input: nums = [3,2,4], target = 6
+ Output: [1,2]
+ Example 3:
+ Input: nums = [3,3], target = 6
+ Output: [0,1]
+ Constraints:
+ 2 <= nums.length <= 105
+ -109 <= nums[i] <= 109
+ -109 <= target <= 109
+ Only one valid answer exists.",https://leetcode.com/problems/two-sum,https://leetcode.com/problems/two-sum/solution/
+Add Two Numbers,"You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
+ You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+ Example 1:
+ Input: l1 = [2,4,3], l2 = [5,6,4]
+ Output: [7,0,8]
+ Explanation: 342 + 465 = 807.
+ Example 2:
+ Input: l1 = [0], l2 = [0]
+ Output: [0]
+ Example 3:
+ Input: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
+ Output: [8,9,9,9,0,0,0,1]
+ Constraints:
+ The number of nodes in each linked list is in the range [1, 100].
+ 0 <= Node.val <= 9
+ It is guaranteed that the list represents a number that does not have leading zeros.",https://leetcode.com/problems/add-two-numbers,https://leetcode.com/problems/add-two-numbers/solution/
+Longest Substring Without Repeating Characters,"Given a string s, find the length of the longest substring without repeating characters.
+ Example 1:
+ Input: s = ""abcabcbb""
+ Output: 3
+ Explanation: The answer is ""abc"", with the length of 3.
+ Example 2:
+ Input: s = ""bbbbb""
+ Output: 1
+ Explanation: The answer is ""b"", with the length of 1.
+ Example 3:
+ Input: s = ""pwwkew""
+ Output: 3
+ Explanation: The answer is ""wke"", with the length of 3.
+ Notice that the answer must be a substring, ""pwke"" is a subsequence and not a substring.
+ Example 4:
+ Input: s = """"
+ Output: 0
+ Constraints:
+ 0 <= s.length <= 5 * 104
+ s consists of English letters, digits, symbols and spaces.",https://leetcode.com/problems/longest-substring-without-repeating-characters,https://leetcode.com/problems/longest-substring-without-repeating-characters/solution/
+Median of Two Sorted Arrays,"Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+ Follow up: The overall run time complexity should be O(log (m+n)).
+ Example 1:
+ Input: nums1 = [1,3], nums2 = [2]
+ Output: 2.00000
+ Explanation: merged array = [1,2,3] and median is 2.
+ Example 2:
+ Input: nums1 = [1,2], nums2 = [3,4]
+ Output: 2.50000
+ Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
+ Example 3:
+ Input: nums1 = [0,0], nums2 = [0,0]
+ Output: 0.00000
+ Example 4:
+ Input: nums1 = [], nums2 = [1]
+ Output: 1.00000
+ Example 5:
+ Input: nums1 = [2], nums2 = []
+ Output: 2.00000
+ Constraints:
+ nums1.length == m
+ nums2.length == n
+ 0 <= m <= 1000
+ 0 <= n <= 1000
+ 1 <= m + n <= 2000
+ -106 <= nums1[i], nums2[i] <= 106",https://leetcode.com/problems/median-of-two-sorted-arrays,https://leetcode.com/problems/median-of-two-sorted-arrays/solution/
+Longest Palindromic Substring,"Given a string s, return the longest palindromic substring in s.
+ Example 1:
+ Input: s = ""babad""
+ Output: ""bab""
+ Note: ""aba"" is also a valid answer.
+ Example 2:
+ Input: s = ""cbbd""
+ Output: ""bb""
+ Example 3:
+ Input: s = ""a""
+ Output: ""a""
+ Example 4:
+ Input: s = ""ac""
+ Output: ""a""
+ Constraints:
+ 1 <= s.length <= 1000
+ s consist of only digits and English letters (lower-case and/or upper-case),",https://leetcode.com/problems/longest-palindromic-substring,https://leetcode.com/problems/longest-palindromic-substring/solution/
+Regular Expression Matching,"Given an input string (s) and a pattern (p), implement regular expression matching with support for '.' and '*' where:
+ '.' Matches any single character.â€‹â€‹â€‹â€‹
+ '*' Matches zero or more of the preceding element.
+ The matching should cover the entire input string (not partial).
+ Example 1:
+ Input: s = ""aa"", p = ""a""
+ Output: false
+ Explanation: ""a"" does not match the entire string ""aa"".
+ Example 2:
+ Input: s = ""aa"", p = ""a*""
+ Output: true
+ Explanation: '*' means zero or more of the preceding element, 'a'. Therefore, by repeating 'a' once, it becomes ""aa"".
+ Example 3:
+ Input: s = ""ab"", p = "".*""
+ Output: true
+ Explanation: "".*"" means ""zero or more (*) of any character (.)"".
+ Example 4:
+ Input: s = ""aab"", p = ""c*a*b""
+ Output: true
+ Explanation: c can be repeated 0 times, a can be repeated 1 time. Therefore, it matches ""aab"".
+ Example 5:
+ Input: s = ""mississippi"", p = ""mis*is*p*.""
+ Output: false
+ Constraints:
+ 0 <= s.length <= 20
+ 0 <= p.length <= 30
+ s contains only lowercase English letters.
+ p contains only lowercase English letters, '.', and '*'.",https://leetcode.com/problems/regular-expression-matching,https://leetcode.com/problems/regular-expression-matching/solution/
+Container With Most Water,"Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of the line i is at (i, ai) and (i, 0). Find two lines, which, together with the x-axis forms a container, such that the container contains the most water.
+ Notice that you may not slant the container.
+ Example 1:
+ Input: height = [1,8,6,2,5,4,8,3,7]
+ Output: 49
+ Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.
+ Example 2:
+ Input: height = [1,1]
+ Output: 1
+ Example 3:
+ Input: height = [4,3,2,1,4]
+ Output: 16
+ Example 4:
+ Input: height = [1,2,1]
+ Output: 2
+ Constraints:
+ 2 <= height.length <= 3 * 104
+ 0 <= height[i] <= 3 * 104",https://leetcode.com/problems/container-with-most-water,https://leetcode.com/problems/container-with-most-water/solution/
+3Sum,"Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
+ Notice that the solution set must not contain duplicate triplets.
+ Example 1:
+ Input: nums = [-1,0,1,2,-1,-4]
+ Output: [[-1,-1,2],[-1,0,1]]
+ Example 2:
+ Input: nums = []
+ Output: []
+ Example 3:
+ Input: nums = [0]
+ Output: []
+ Constraints:
+ 0 <= nums.length <= 3000
+ -105 <= nums[i] <= 105",https://leetcode.com/problems/3sum,https://leetcode.com/problems/3sum/solution/
+Letter Combinations of a Phone Number,"Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.
+ A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
+ Example 1:
+ Input: digits = ""23""
+ Output: [""ad"",""ae"",""af"",""bd"",""be"",""bf"",""cd"",""ce"",""cf""]
+ Example 2:
+ Input: digits = """"
+ Output: []
+ Example 3:
+ Input: digits = ""2""
+ Output: [""a"",""b"",""c""]
+ Constraints:
+ 0 <= digits.length <= 4
+ digits[i] is a digit in the range ['2', '9'].",https://leetcode.com/problems/letter-combinations-of-a-phone-number,https://leetcode.com/problems/letter-combinations-of-a-phone-number/solution/
+Remove Nth Node From End of List,"Given the head of a linked list, remove the nth node from the end of the list and return its head.
+ Follow up: Could you do this in one pass?
+ Example 1:
+ Input: head = [1,2,3,4,5], n = 2
+ Output: [1,2,3,5]
+ Example 2:
+ Input: head = [1], n = 1
+ Output: []
+ Example 3:
+ Input: head = [1,2], n = 1
+ Output: [1]
+ Constraints:
+ The number of nodes in the list is sz.
+ 1 <= sz <= 30
+ 0 <= Node.val <= 100
+ 1 <= n <= sz",https://leetcode.com/problems/remove-nth-node-from-end-of-list,https://leetcode.com/problems/remove-nth-node-from-end-of-list/solution/
+Valid Parentheses,"Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+ An input string is valid if:
+ Open brackets must be closed by the same type of brackets.
+ Open brackets must be closed in the correct order.
+ Example 1:
+ Input: s = ""()""
+ Output: true
+ Example 2:
+ Input: s = ""()[]{}""
+ Output: true
+ Example 3:
+ Input: s = ""(]""
+ Output: false
+ Example 4:
+ Input: s = ""([)]""
+ Output: false
+ Example 5:
+ Input: s = ""{[]}""
+ Output: true
+ Constraints:
+ 1 <= s.length <= 104
+ s consists of parentheses only '()[]{}'.",https://leetcode.com/problems/valid-parentheses,https://leetcode.com/problems/valid-parentheses/solution/
+Merge Two Sorted Lists,"Merge two sorted linked lists and return it as a new sorted list. The new list should be made by splicing together the nodes of the first two lists.
+ Example 1:
+ Input: l1 = [1,2,4], l2 = [1,3,4]
+ Output: [1,1,2,3,4,4]
+ Example 2:
+ Input: l1 = [], l2 = []
+ Output: []
+ Example 3:
+ Input: l1 = [], l2 = [0]
+ Output: [0]
+ Constraints:
+ The number of nodes in both lists is in the range [0, 50].
+ -100 <= Node.val <= 100
+ Both l1 and l2 are sorted in non-decreasing order.",https://leetcode.com/problems/merge-two-sorted-lists,https://leetcode.com/problems/merge-two-sorted-lists/solution/
+Generate Parentheses,"Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+ Example 1:
+ Input: n = 3
+ Output: [""((()))"",""(()())"",""(())()"",""()(())"",""()()()""]
+ Example 2:
+ Input: n = 1
+ Output: [""()""]
+ Constraints:
+ 1 <= n <= 8",https://leetcode.com/problems/generate-parentheses,https://leetcode.com/problems/generate-parentheses/solution/
+Merge k Sorted Lists,"You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+ Merge all the linked-lists into one sorted linked-list and return it.
+ Example 1:
+ Input: lists = [[1,4,5],[1,3,4],[2,6]]
+ Output: [1,1,2,3,4,4,5,6]
+ Explanation: The linked-lists are:
+ [
+ 1->4->5,
+ 1->3->4,
+ 2->6
+ ]
+ merging them into one sorted list:
+ 1->1->2->3->4->4->5->6
+ Example 2:
+ Input: lists = []
+ Output: []
+ Example 3:
+ Input: lists = [[]]
+ Output: []
+ Constraints:
+ k == lists.length
+ 0 <= k <= 10^4
+ 0 <= lists[i].length <= 500
+ -10^4 <= lists[i][j] <= 10^4
+ lists[i] is sorted in ascending order.
+ The sum of lists[i].length won't exceed 10^4.",https://leetcode.com/problems/merge-k-sorted-lists,https://leetcode.com/problems/merge-k-sorted-lists/solution/
+Longest Valid Parentheses,"Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.
+ Example 1:
+ Input: s = ""(()""
+ Output: 2
+ Explanation: The longest valid parentheses substring is ""()"".
+ Example 2:
+ Input: s = "")()())""
+ Output: 4
+ Explanation: The longest valid parentheses substring is ""()()"".
+ Example 3:
+ Input: s = """"
+ Output: 0
+ Constraints:
+ 0 <= s.length <= 3 * 104
+ s[i] is '(', or ')'.",https://leetcode.com/problems/longest-valid-parentheses,https://leetcode.com/problems/longest-valid-parentheses/solution/
+Search in Rotated Sorted Array,"You are given an integer array nums sorted in ascending order, and an integer target.
+ Suppose that nums is rotated at some pivot unknown to you beforehand (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
+ If target is found in the array return its index, otherwise, return -1.
+ Example 1:
+ Input: nums = [4,5,6,7,0,1,2], target = 0
+ Output: 4
+ Example 2:
+ Input: nums = [4,5,6,7,0,1,2], target = 3
+ Output: -1
+ Example 3:
+ Input: nums = [1], target = 0
+ Output: -1
+ Constraints:
+ 1 <= nums.length <= 5000
+ -10^4 <= nums[i] <= 10^4
+ All values of nums are unique.
+ nums is guranteed to be rotated at some pivot.
+ -10^4 <= target <= 10^4",https://leetcode.com/problems/search-in-rotated-sorted-array,https://leetcode.com/problems/search-in-rotated-sorted-array/solution/
+Find First and Last Position of Element in Sorted Array,"Given an array of integers nums sorted in ascending order, find the starting and ending position of a given target value.
+ If target is not found in the array, return [-1, -1].
+ Follow up: Could you write an algorithm with O(log n) runtime complexity?
+ Example 1:
+ Input: nums = [5,7,7,8,8,10], target = 8
+ Output: [3,4]
+ Example 2:
+ Input: nums = [5,7,7,8,8,10], target = 6
+ Output: [-1,-1]
+ Example 3:
+ Input: nums = [], target = 0
+ Output: [-1,-1]
+ Constraints:
+ 0 <= nums.length <= 105
+ -109 <= nums[i] <= 109
+ nums is a non-decreasing array.
+ -109 <= target <= 109",https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array,https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/solution/
+Combination Sum,"Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order.
+ The same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the frequency of at least one of the chosen numbers is different.
+ It is guaranteed that the number of unique combinations that sum up to target is less than 150 combinations for the given input.
+ Example 1:
+ Input: candidates = [2,3,6,7], target = 7
+ Output: [[2,2,3],[7]]
+ Explanation:
+ 2 and 3 are candidates, and 2 + 2 + 3 = 7. Note that 2 can be used multiple times.
+ 7 is a candidate, and 7 = 7.
+ These are the only two combinations.
+ Example 2:
+ Input: candidates = [2,3,5], target = 8
+ Output: [[2,2,2,2],[2,3,3],[3,5]]
+ Example 3:
+ Input: candidates = [2], target = 1
+ Output: []
+ Example 4:
+ Input: candidates = [1], target = 1
+ Output: [[1]]
+ Example 5:
+ Input: candidates = [1], target = 2
+ Output: [[1,1]]
+ Constraints:
+ 1 <= candidates.length <= 30
+ 1 <= candidates[i] <= 200
+ All elements of candidates are distinct.
+ 1 <= target <= 500",https://leetcode.com/problems/combination-sum,https://leetcode.com/problems/combination-sum/solution/
+First Missing Positive,"Given an unsorted integer array nums, find the smallest missing positive integer.
+ Follow up: Could you implement an algorithm that runs in O(n) time and uses constant extra space.?
+ Example 1:
+ Input: nums = [1,2,0]
+ Output: 3
+ Example 2:
+ Input: nums = [3,4,-1,1]
+ Output: 2
+ Example 3:
+ Input: nums = [7,8,9,11,12]
+ Output: 1
+ Constraints:
+ 0 <= nums.length <= 300
+ -231 <= nums[i] <= 231 - 1",https://leetcode.com/problems/first-missing-positive,https://leetcode.com/problems/first-missing-positive/solution/
+Trapping Rain Water,"Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+ Example 1:
+ Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+ Output: 6
+ Explanation: The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped.
+ Example 2:
+ Input: height = [4,2,0,3,2,5]
+ Output: 9
+ Constraints:
+ n == height.length
+ 0 <= n <= 3 * 104
+ 0 <= height[i] <= 105",https://leetcode.com/problems/trapping-rain-water,https://leetcode.com/problems/trapping-rain-water/solution/
+Jump Game II,"Given an array of non-negative integers nums, you are initially positioned at the first index of the array.
+ Each element in the array represents your maximum jump length at that position.
+ Your goal is to reach the last index in the minimum number of jumps.
+ You can assume that you can always reach the last index.
+ Example 1:
+ Input: nums = [2,3,1,1,4]
+ Output: 2
+ Explanation: The minimum number of jumps to reach the last index is 2. Jump 1 step from index 0 to 1, then 3 steps to the last index.
+ Example 2:
+ Input: nums = [2,3,0,1,4]
+ Output: 2
+ Constraints:
+ 1 <= nums.length <= 3 * 104
+ 0 <= nums[i] <= 105",https://leetcode.com/problems/jump-game-ii,https://leetcode.com/problems/jump-game-ii/solution/
+Permutations,"Given a collection of distinct integers, return all possible permutations.
+ Example:
+ Input: [1,2,3]
+ Output:
+ [
+ [1,2,3],
+ [1,3,2],
+ [2,1,3],
+ [2,3,1],
+ [3,1,2],
+ [3,2,1]
+ ]",https://leetcode.com/problems/permutations,https://leetcode.com/problems/permutations/solution/
+Rotate Image,"You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
+ You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
+ Example 1:
+ Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
+ Output: [[7,4,1],[8,5,2],[9,6,3]]
+ Example 2:
+ Input: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
+ Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
+ Example 3:
+ Input: matrix = [[1]]
+ Output: [[1]]
+ Example 4:
+ Input: matrix = [[1,2],[3,4]]
+ Output: [[3,1],[4,2]]
+ Constraints:
+ matrix.length == n
+ matrix[i].length == n
+ 1 <= n <= 20
+ -1000 <= matrix[i][j] <= 1000",https://leetcode.com/problems/rotate-image,https://leetcode.com/problems/rotate-image/solution/
+Group Anagrams,"Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+ An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+ Example 1:
+ Input: strs = [""eat"",""tea"",""tan"",""ate"",""nat"",""bat""]
+ Output: [[""bat""],[""nat"",""tan""],[""ate"",""eat"",""tea""]]
+ Example 2:
+ Input: strs = [""""]
+ Output: [[""""]]
+ Example 3:
+ Input: strs = [""a""]
+ Output: [[""a""]]
+ Constraints:
+ 1 <= strs.length <= 104
+ 0 <= strs[i].length <= 100
+ strs[i] consists of lower-case English letters.",https://leetcode.com/problems/group-anagrams,https://leetcode.com/problems/group-anagrams/solution/
+Maximum Subarray,"Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+ Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
+ Example 1:
+ Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+ Output: 6
+ Explanation: [4,-1,2,1] has the largest sum = 6.
+ Example 2:
+ Input: nums = [1]
+ Output: 1
+ Example 3:
+ Input: nums = [0]
+ Output: 0
+ Example 4:
+ Input: nums = [-1]
+ Output: -1
+ Example 5:
+ Input: nums = [-2147483647]
+ Output: -2147483647
+ Constraints:
+ 1 <= nums.length <= 2 * 104
+ -231 <= nums[i] <= 231 - 1",https://leetcode.com/problems/maximum-subarray,https://leetcode.com/problems/maximum-subarray/solution/
+Jump Game,"Given an array of non-negative integers, you are initially positioned at the first index of the array.
+ Each element in the array represents your maximum jump length at that position.
+ Determine if you are able to reach the last index.
+ Example 1:
+ Input: nums = [2,3,1,1,4]
+ Output: true
+ Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
+ Example 2:
+ Input: nums = [3,2,1,0,4]
+ Output: false
+ Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.
+ Constraints:
+ 1 <= nums.length <= 3 * 10^4
+ 0 <= nums[i][j] <= 10^5",https://leetcode.com/problems/jump-game,https://leetcode.com/problems/jump-game/solution/
+Merge Intervals,"Given a collection of intervals, merge all overlapping intervals.
+ Example 1:
+ Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
+ Output: [[1,6],[8,10],[15,18]]
+ Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
+ Example 2:
+ Input: intervals = [[1,4],[4,5]]
+ Output: [[1,5]]
+ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
+ NOTE: input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.
+ Constraints:
+ intervals[i][0] <= intervals[i][1]",https://leetcode.com/problems/merge-intervals,https://leetcode.com/problems/merge-intervals/solution/
+Unique Paths,"A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
+ The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
+ How many possible unique paths are there?
+ Example 1:
+ Input: m = 3, n = 7
+ Output: 28
+ Example 2:
+ Input: m = 3, n = 2
+ Output: 3
+ Explanation:
+ From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:
+ 1. Right -> Down -> Down
+ 2. Down -> Down -> Right
+ 3. Down -> Right -> Down
+ Example 3:
+ Input: m = 7, n = 3
+ Output: 28
+ Example 4:
+ Input: m = 3, n = 3
+ Output: 6
+ Constraints:
+ 1 <= m, n <= 100
+ It's guaranteed that the answer will be less than or equal to 2 * 109.",https://leetcode.com/problems/unique-paths,https://leetcode.com/problems/unique-paths/solution/
+Minimum Path Sum,"Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+ Note: You can only move either down or right at any point in time.
+ Example:
+ Input:
+ [
+ [1,3,1],
+ [1,5,1],
+ [4,2,1]
+ ]
+ Output: 7
+ Explanation: Because the path 1â†’3â†’1â†’1â†’1 minimizes the sum.",https://leetcode.com/problems/minimum-path-sum,https://leetcode.com/problems/minimum-path-sum/solution/
+Climbing Stairs,"You are climbing a stair case. It takes n steps to reach to the top.
+ Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+ Example 1:
+ Input: 2
+ Output: 2
+ Explanation: There are two ways to climb to the top.
+ 1. 1 step + 1 step
+ 2. 2 steps
+ Example 2:
+ Input: 3
+ Output: 3
+ Explanation: There are three ways to climb to the top.
+ 1. 1 step + 1 step + 1 step
+ 2. 1 step + 2 steps
+ 3. 2 steps + 1 step
+ Constraints:
+ 1 <= n <= 45",https://leetcode.com/problems/climbing-stairs,https://leetcode.com/problems/climbing-stairs/solution/
+Edit Distance,"Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
+ You have the following 3 operations permitted on a word:
+ Insert a character
+ Delete a character
+ Replace a character
+ Example 1:
+ Input: word1 = ""horse"", word2 = ""ros""
+ Output: 3
+ Explanation:
+ horse -> rorse (replace 'h' with 'r')
+ rorse -> rose (remove 'r')
+ rose -> ros (remove 'e')
+ Example 2:
+ Input: word1 = ""intention"", word2 = ""execution""
+ Output: 5
+ Explanation:
+ intention -> inention (remove 't')
+ inention -> enention (replace 'i' with 'e')
+ enention -> exention (replace 'n' with 'x')
+ exention -> exection (replace 'n' with 'c')
+ exection -> execution (insert 'u')",https://leetcode.com/problems/edit-distance,https://leetcode.com/problems/edit-distance/solution/
+Sort Colors,"Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
+ Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
+ Follow up:
+ Could you solve this problem without using the library's sort function?
+ Could you come up with a one-pass algorithm using only O(1) constant space?
+ Example 1:
+ Input: nums = [2,0,2,1,1,0]
+ Output: [0,0,1,1,2,2]
+ Example 2:
+ Input: nums = [2,0,1]
+ Output: [0,1,2]
+ Example 3:
+ Input: nums = [0]
+ Output: [0]
+ Example 4:
+ Input: nums = [1]
+ Output: [1]
+ Constraints:
+ n == nums.length
+ 1 <= n <= 300
+ nums[i] is 0, 1, or 2.",https://leetcode.com/problems/sort-colors,https://leetcode.com/problems/sort-colors/solution/
+Minimum Window Substring,"Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
+ Example:
+ Input: S = ""ADOBECODEBANC"", T = ""ABC""
+ Output: ""BANC""
+ Note:
+ If there is no such window in S that covers all characters in T, return the empty string """".
+ If there is such window, you are guaranteed that there will always be only one unique minimum window in S.",https://leetcode.com/problems/minimum-window-substring,https://leetcode.com/problems/minimum-window-substring/solution/
+Subsets,"Given a set of distinct integers, nums, return all possible subsets (the power set).
+ Note: The solution set must not contain duplicate subsets.
+ Example:
+ Input: nums = [1,2,3]
+ Output:
+ [
+ [3],
+ [1],
+ [2],
+ [1,2,3],
+ [1,3],
+ [2,3],
+ [1,2],
+ []
+ ]",https://leetcode.com/problems/subsets,https://leetcode.com/problems/subsets/solution/
+Word Search,"Given a 2D board and a word, find if the word exists in the grid.
+ The word can be constructed from letters of sequentially adjacent cells, where ""adjacent"" cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.
+ Example 1:
+ Input: board = [[""A"",""B"",""C"",""E""],[""S"",""F"",""C"",""S""],[""A"",""D"",""E"",""E""]], word = ""ABCCED""
+ Output: true
+ Example 2:
+ Input: board = [[""A"",""B"",""C"",""E""],[""S"",""F"",""C"",""S""],[""A"",""D"",""E"",""E""]], word = ""SEE""
+ Output: true
+ Example 3:
+ Input: board = [[""A"",""B"",""C"",""E""],[""S"",""F"",""C"",""S""],[""A"",""D"",""E"",""E""]], word = ""ABCB""
+ Output: false
+ Constraints:
+ board and word consists only of lowercase and uppercase English letters.
+ 1 <= board.length <= 200
+ 1 <= board[i].length <= 200
+ 1 <= word.length <= 10^3",https://leetcode.com/problems/word-search,https://leetcode.com/problems/word-search/solution/
+Largest Rectangle in Histogram,"Given n non-negative integers representing the histogram's bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
+ Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3].
+ The largest rectangle is shown in the shaded area, which has area = 10 unit.
+ Example:
+ Input: [2,1,5,6,2,3]
+ Output: 10",https://leetcode.com/problems/largest-rectangle-in-histogram,https://leetcode.com/problems/largest-rectangle-in-histogram/solution/
+Maximal Rectangle,"Given a rows x cols binary matrix filled with 0's and 1's, find the largest rectangle containing only 1's and return its area.
+ Example 1:
+ Input: matrix = [[""1"",""0"",""1"",""0"",""0""],[""1"",""0"",""1"",""1"",""1""],[""1"",""1"",""1"",""1"",""1""],[""1"",""0"",""0"",""1"",""0""]]
+ Output: 6
+ Explanation: The maximal rectangle is shown in the above picture.
+ Example 2:
+ Input: matrix = []
+ Output: 0
+ Example 3:
+ Input: matrix = [[""0""]]
+ Output: 0
+ Example 4:
+ Input: matrix = [[""1""]]
+ Output: 1
+ Example 5:
+ Input: matrix = [[""0"",""0""]]
+ Output: 0
+ Constraints:
+ rows == matrix.length
+ cols == matrix.length
+ 0 <= row, cols <= 200
+ matrix[i][j] is '0' or '1'.",https://leetcode.com/problems/maximal-rectangle,https://leetcode.com/problems/maximal-rectangle/solution/
+Binary Tree Inorder Traversal,"Given the root of a binary tree, return the inorder traversal of its nodes' values.
+ Example 1:
+ Input: root = [1,null,2,3]
+ Output: [1,3,2]
+ Example 2:
+ Input: root = []
+ Output: []
+ Example 3:
+ Input: root = [1]
+ Output: [1]
+ Example 4:
+ Input: root = [1,2]
+ Output: [2,1]
+ Example 5:
+ Input: root = [1,null,2]
+ Output: [1,2]
+ Constraints:
+ The number of nodes in the tree is in the range [0, 100].
+ -100 <= Node.val <= 100
+ Follow up:
+ Recursive solution is trivial, could you do it iteratively?",https://leetcode.com/problems/binary-tree-inorder-traversal,https://leetcode.com/problems/binary-tree-inorder-traversal/solution/
+Unique Binary Search Trees,"Given n, how many structurally unique BST's (binary search trees) that store values 1 ... n?
+ Example:
+ Input: 3
+ Output: 5
+ Explanation:
+ Given n = 3, there are a total of 5 unique BST's:
+ 1 3 3 2 1
+ \ / / / \ \
+ 3 2 1 1 3 2
+ / / \ \
+ 2 1 2 3
+ Constraints:
+ 1 <= n <= 19",https://leetcode.com/problems/unique-binary-search-trees,https://leetcode.com/problems/unique-binary-search-trees/solution/
+Validate Binary Search Tree,"Given a binary tree, determine if it is a valid binary search tree (BST).
+ Assume a BST is defined as follows:
+ The left subtree of a node contains only nodes with keys less than the node's key.
+ The right subtree of a node contains only nodes with keys greater than the node's key.
+ Both the left and right subtrees must also be binary search trees.
+ Example 1:
+ 2
+ / \
+ 1 3
+ Input: [2,1,3]
+ Output: true
+ Example 2:
+ 5
+ / \
+ 1 4
+ / \
+ 3 6
+ Input: [5,1,4,null,null,3,6]
+ Output: false
+ Explanation: The root node's value is 5 but its right child's value is 4.",https://leetcode.com/problems/validate-binary-search-tree,https://leetcode.com/problems/validate-binary-search-tree/solution/
+Symmetric Tree,"Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
+ For example, this binary tree [1,2,2,3,4,4,3] is symmetric:
+ 1
+ / \
+ 2 2
+ / \ / \
+ 3 4 4 3
+ But the following [1,2,2,null,3,null,3] is not:
+ 1
+ / \
+ 2 2
+ \ \
+ 3 3
+ Follow up: Solve it both recursively and iteratively.",https://leetcode.com/problems/symmetric-tree,https://leetcode.com/problems/symmetric-tree/solution/
+Binary Tree Level Order Traversal,"Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
+ For example:
+ Given binary tree [3,9,20,null,null,15,7],
+ 3
+ / \
+ 9 20
+ / \
+ 15 7
+ return its level order traversal as:
+ [
+ [3],
+ [9,20],
+ [15,7]
+ ]",https://leetcode.com/problems/binary-tree-level-order-traversal,https://leetcode.com/problems/binary-tree-level-order-traversal/solution/
+Maximum Depth of Binary Tree,"Given a binary tree, find its maximum depth.
+ The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+ Note: A leaf is a node with no children.
+ Example:
+ Given binary tree [3,9,20,null,null,15,7],
+ 3
+ / \
+ 9 20
+ / \
+ 15 7
+ return its depth = 3.",https://leetcode.com/problems/maximum-depth-of-binary-tree,https://leetcode.com/problems/maximum-depth-of-binary-tree/solution/
+Construct Binary Tree from Preorder and Inorder Traversal,"Given preorder and inorder traversal of a tree, construct the binary tree.
+ Note:
+ You may assume that duplicates do not exist in the tree.
+ For example, given
+ preorder = [3,9,20,15,7]
+ inorder = [9,3,15,20,7]
+ Return the following binary tree:
+ 3
+ / \
+ 9 20
+ / \
+ 15 7",https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal,https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solution/
+Flatten Binary Tree to Linked List,"Given a binary tree, flatten it to a linked list in-place.
+ For example, given the following tree:
+ 1
+ / \
+ 2 5
+ / \ \
+ 3 4 6
+ The flattened tree should look like:
+ 1
+ \
+ 2
+ \
+ 3
+ \
+ 4
+ \
+ 5
+ \
+ 6",https://leetcode.com/problems/flatten-binary-tree-to-linked-list,https://leetcode.com/problems/flatten-binary-tree-to-linked-list/solution/
+Best Time to Buy and Sell Stock,"Say you have an array for which the ith element is the price of a given stock on day i.
+ If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+ Note that you cannot sell a stock before you buy one.
+ Example 1:
+ Input: [7,1,5,3,6,4]
+ Output: 5
+ Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+ Not 7-1 = 6, as selling price needs to be larger than buying price.
+ Example 2:
+ Input: [7,6,4,3,1]
+ Output: 0
+ Explanation: In this case, no transaction is done, i.e. max profit = 0.",https://leetcode.com/problems/best-time-to-buy-and-sell-stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/solution/
+Binary Tree Maximum Path Sum,"Given a non-empty binary tree, find the maximum path sum.
+ For this problem, a path is defined as any node sequence from some starting node to any node in the tree along the parent-child connections. The path must contain at least one node and does not need to go through the root.
+ Example 1:
+ Input: root = [1,2,3]
+ Output: 6
+ Example 2:
+ Input: root = [-10,9,20,null,null,15,7]
+ Output: 42
+ Constraints:
+ The number of nodes in the tree is in the range [0, 3 * 104].
+ -1000 <= Node.val <= 1000",https://leetcode.com/problems/binary-tree-maximum-path-sum,https://leetcode.com/problems/binary-tree-maximum-path-sum/solution/
+Longest Consecutive Sequence,"Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+ Your algorithm should run in O(n) complexity.
+ Example:
+ Input: [100, 4, 200, 1, 3, 2]
+ Output: 4
+ Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.",https://leetcode.com/problems/longest-consecutive-sequence,https://leetcode.com/problems/longest-consecutive-sequence/solution/
+Single Number,"Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+ Follow up: Could you implement a solution with a linear runtime complexity and without using extra memory?
+ Example 1:
+ Input: nums = [2,2,1]
+ Output: 1
+ Example 2:
+ Input: nums = [4,1,2,1,2]
+ Output: 4
+ Example 3:
+ Input: nums = [1]
+ Output: 1
+ Constraints:
+ 1 <= nums.length <= 3 * 104
+ -3 * 104 <= nums[i] <= 3 * 104
+ Each element in the array appears twice except for one element which appears only once.",https://leetcode.com/problems/single-number,https://leetcode.com/problems/single-number/solution/
+Copy List with Random Pointer,"A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
+ Return a deep copy of the list.
+ The Linked List is represented in the input/output as a list of n nodes. Each node is represented as a pair of [val, random_index] where:
+ val: an integer representing Node.val
+ random_index: the index of the node (range from 0 to n-1) where random pointer points to, or null if it does not point to any node.
+ Example 1:
+ Input: head = [[7,null],[13,0],[11,4],[10,2],[1,0]]
+ Output: [[7,null],[13,0],[11,4],[10,2],[1,0]]
+ Example 2:
+ Input: head = [[1,1],[2,1]]
+ Output: [[1,1],[2,1]]
+ Example 3:
+ Input: head = [[3,null],[3,0],[3,null]]
+ Output: [[3,null],[3,0],[3,null]]
+ Example 4:
+ Input: head = []
+ Output: []
+ Explanation: Given linked list is empty (null pointer), so return null.
+ Constraints:
+ -10000 <= Node.val <= 10000
+ Node.random is null or pointing to a node in the linked list.
+ The number of nodes will not exceed 1000.",https://leetcode.com/problems/copy-list-with-random-pointer,https://leetcode.com/problems/copy-list-with-random-pointer/solution/
