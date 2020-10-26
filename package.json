@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/aka-andi/csbot#readme",
   "dependencies": {
-    "discord.js": "^12.3.1"
+    "discord.js": "^12.3.1",
+    "puppeteer": "^5.4.0"
   }
 }
