@@ -1,4 +1,4 @@
-var alertsOn = true;
+var alertsOn = false;
 var interval;
 module.exports = {
     name: 'alerts',
