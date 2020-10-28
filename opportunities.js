@@ -1,6 +1,19 @@
 const puppeteer = require("puppeteer");
-var fs = require("fs");
-(async () => {
+var storedData = [];
+function filter(data) {
+    updates = [];
+    if (storedData.length == 0) {
+        storedData = data;
+        return data;
+    }
+    data.forEach(element => {
+        if (!(storedData.some(e => e.link === element.link))) {
+            updates.push(element);
+        }
+    });
+    return updates;
+}
+(async function scrape() {
     try {
         var browser = await puppeteer.launch({ headless: false });
         var page = await browser.newPage();
@@ -19,12 +32,10 @@ var fs = require("fs");
             return jobArr;
         });
         await browser.close();
-        module.exports = data;
-        console.log("Browser Closed");
+        module.exports = filter(data);
     } catch (err) {
         console.log(err);
         await browser.close();
-        console.log("Browser Closed");
     }
 })();
 

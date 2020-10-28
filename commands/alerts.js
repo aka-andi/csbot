@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-
 var alertsOn = false;
 var interval;
 module.exports = {
@@ -24,8 +23,7 @@ module.exports = {
                     });
                     message.channel.send({ embed });
                 }
-            }, 10000);
-
+            }, 5000);
         }
     }
 }
