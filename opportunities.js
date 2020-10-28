@@ -19,10 +19,7 @@ var fs = require("fs");
             return jobArr;
         });
         await browser.close();
-        fs.writeFile("scraped.json", JSON.stringify(data), function (err) {
-            if (err) throw err;
-            console.log("Saved!");
-        });
+        module.exports = data;
         console.log("Browser Closed");
     } catch (err) {
         console.log(err);
