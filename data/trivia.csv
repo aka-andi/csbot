@@ -14,7 +14,7 @@ How are the elements of a 2D array are stored in the memory?,"There are two tech
 "Calculate the address of a random element present in a 2D array, given base address as BA.","Row-Major Order: If array is declared as a[m][n] where m is the number of rows while n is the number of columns, then address of an element a[i][j] of the array stored in row major order is calculated as,"
 Define Linked List Data structure.,"Linked List is the collection of randomly stored data objects called nodes. In Linked List, each node is linked to its adjacent node through a pointer. A node contains two fields, i.e. Data Field and Link Field."
 Are linked lists considered linear or non-linear data structures?,A linked list is considered both linear and non-linear data structure depending upon the situation.
-What are the advantages of Linked List over an array?,
+What are the advantages of Linked List over an array?,Dynamic size and ease of insertion/deletion.
 "If you are using C language to implement the heterogeneous linked list, what pointer type should be used?","The heterogeneous linked list contains different data types, so it is not possible to use ordinary pointers for this. For this purpose, you have to use a generic pointer type like void pointer because the void pointer is capable of storing a pointer to any type."
 Define the queue data structure.,A queue can be defined as an ordered list which enables insert operations to be performed at one end called REAR and delete operations to be performed at another end called FRONT.
 What is a dequeue?,"Dequeue (also known as double-ended queue) can be defined as an ordered set of elements in which the insertion and deletion can be performed at both the ends, i.e. front and rear."
