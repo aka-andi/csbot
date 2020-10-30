@@ -23,7 +23,7 @@ module.exports = {
                 },
                 {
                     name: "!alerts",
-                    value: "Toggle between ON/OFF for receiving career opportunity alerts. (Default to ON)"
+                    value: "Toggle between ON/OFF for receiving career opportunity alerts. (Default to OFF)"
                 }
                 ]
             }
