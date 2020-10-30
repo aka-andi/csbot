@@ -26,7 +26,7 @@ module.exports = {
                         message.channel.send({ embed });
                     }
                 }
-                catch (e) {
+                catch (err) {
                     console.log(err);
                 }
             }, 600000); // interval set to 10 minutes
