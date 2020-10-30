@@ -1,5 +1,6 @@
 const puppeteer = require("puppeteer");
 var storedData = [];
+
 function filter(data) {
     updates = [];
     if (storedData.length == 0) {
@@ -13,7 +14,7 @@ function filter(data) {
     });
     return updates;
 }
-(async function scrape() {
+module.exports = async function scrape() {
     try {
         var browser = await puppeteer.launch({ headless: false });
         var page = await browser.newPage();
@@ -24,18 +25,20 @@ function filter(data) {
             for (var i = 0; i < headerList.length; i++) {
                 var text = headerList[i].innerText;
                 var html = headerList[i].innerHTML;
-                jobArr[i] = {
+                jobArr.push({
                     title: (text.indexOf("\n") > 0) ? text.substring(0, text.indexOf("\n")) : text,
                     link: html.substring((html.indexOf("href=") + 6), (html.indexOf("onmousedown") - 2))
-                };
+                });
+                if (!jobArr[jobArr.length - 1].link.includes("/rc/clk?jk="))
+                    jobArr.pop();
             }
             return jobArr;
         });
         await browser.close();
-        module.exports = filter(data);
+        return filter(data);
     } catch (err) {
         console.log(err);
         await browser.close();
     }
-})();
+}
 

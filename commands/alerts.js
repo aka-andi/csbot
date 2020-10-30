@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const scrape = require('./../opportunities');
 var alertsOn = false;
 var interval;
 module.exports = {
@@ -12,18 +13,23 @@ module.exports = {
         }
         else {
             message.channel.send('Career opportunity alerts are now ON');
-            interval = setInterval(function () {
-                const data = require('./../opportunities.js')
-                if (data.length != undefined) {
-                    const embed = new Discord.MessageEmbed()
-                    embed.setTitle('New Career Opportunities!')
-                    embed.setDescription("Last updated: " + new Date().toLocaleString())
-                    data.forEach(element => {
-                        embed.addField(element.title, "https://www.indeed.com" + element.link);
-                    });
-                    message.channel.send({ embed });
+            interval = setInterval(async function () {
+                try {
+                    const data = await scrape()
+                    if ((data.length != undefined) && (data.length != 0)) {
+                        const embed = new Discord.MessageEmbed()
+                        embed.setTitle('New Career Opportunities!')
+                        embed.setDescription("Last updated: " + new Date().toLocaleString())
+                        data.forEach(element => {
+                            embed.addField(element.title, "https://www.indeed.com" + element.link);
+                        });
+                        message.channel.send({ embed });
+                    }
                 }
-            }, 5000);
+                catch (e) {
+                    console.log(err);
+                }
+            }, 600000); // interval set to 10 minutes
         }
     }
 }
