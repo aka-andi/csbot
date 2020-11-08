@@ -1,10 +1,39 @@
-module.exports = {
+
+const parse = require('csv-parse');
+const fs = require('fs');
+const csvData = []; 
+const path = require('path');
+//const random = Math.floor(Math.random()* Math.floor(csvData.length));
+//{const r = random};
+
+//read trivia.csv file and create array of arrasy. Inner arrays represents one pair of question and answer
+//fs.createReadStream('/Users/brendahenriquez/Desktop/cs321/csbot/data/trivia.csv')
+fs.createReadStream(path.join('data', 'trivia.csv'))
+  .pipe(
+      parse({
+        delimiter: ','
+      })
+  )
+  .on('data', function(dataRow){
+      csvData.push(dataRow);
+  })
+  .on('end', function(){
+    //console.log(csvData);
+  });
+  
+  
+
+module.exports = {  
   name: 'trivia',
   description: "trivia command",
   execute(message, args) {
+    //console.log(csvData[8][1]);
+    //get random question
+    const random = Math.floor(Math.random()* Math.floor(csvData.length));
     const trivia = {
-      question: 'What is a linked list?',
-      answer: 'A linked list is a sequence of nodes in which each node is connected to the node following it. This forms a chain-like link for data storage.'
+      
+      question: csvData[random][0],
+      answer: csvData[random][1]
     }
     module.exports = trivia;
     message.channel.send({
