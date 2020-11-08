@@ -9,6 +9,9 @@ A *Discord* bot that prepares computer science students for their career by prov
 First, install Discord.js:
 `npm install discord.js`
 
+Then, install csv-parse:
+`npm i csv-parse`
+
 Then, install Puppeteer:
 `npm install --save puppeteer`
 
