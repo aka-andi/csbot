@@ -1,0 +1,10 @@
+var expect = require('chai').expect; 
+var alerts = require('../commands/alerts'); 
+describe('alerts()', function () { 
+  it('should start with status = OFF', function () { 
+    expect(alerts.getStatus()).to.be.equal(false);
+  }); 
+  it('should toggle the alert status', function () { 
+    expect(alerts.toggleStatus()).to.be.equal(true);
+  }); 
+});

@@ -12,6 +12,5 @@ First, install Discord.js:
 Then, install Puppeteer:
 `npm install --save puppeteer`
 
-Lastly, install Jest and the Discord.js test library:
-`npm i jest --save-dev`
-`npm install jest-discord jest-environment-discord --save-dev`
+Lastly, install Mocha and Chai for testing:
+`npm install --save-dev mocha chai`

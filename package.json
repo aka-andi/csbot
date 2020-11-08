@@ -4,7 +4,7 @@
   "description": "CS321 Team 8 project",
   "main": "main.js",
   "scripts": {
-    "test": "jest"
+    "test": "mocha tests/"
   },
   "repository": {
     "type": "git",
@@ -21,8 +21,7 @@
     "puppeteer": "^5.4.1"
   },
   "devDependencies": {
-    "jest": "^26.6.3",
-    "jest-discord": "^0.1.0",
-    "jest-environment-discord": "^0.1.0"
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
   }
 }

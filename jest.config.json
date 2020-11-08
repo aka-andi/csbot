@@ -1,8 +1,0 @@
-{
-    "testEnvironment": "jest-environment-discord",
-    "testEnvironmentOptions": {
-      "testGuildId": "759968594107826218"
-    },
-    "globalSetup": "./tests/test.global.js",
-    "setupFilesAfterEnv": ["./tests/test.js"]
-  }

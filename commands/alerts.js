@@ -2,11 +2,19 @@ const Discord = require('discord.js');
 const scrape = require('./../opportunities');
 var alertsOn = false;
 var interval;
+function toggleStatus() {
+    status = (alertsOn == true) ? false : true;
+    return status;
+}
 module.exports = {
     name: 'alerts',
     description: "alert command",
+    getStatus() {
+        return alertsOn;
+    },
+    toggleStatus: toggleStatus,
     execute(message, args) {
-        alertsOn = (alertsOn == true) ? false : true;
+        alertsOn = toggleStatus()
         if (!alertsOn) {
             clearInterval(interval);
             message.channel.send('Career opportunity alerts are now OFF');
