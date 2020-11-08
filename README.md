@@ -14,3 +14,20 @@ Then, install Puppeteer:
 
 Lastly, install Mocha and Chai for testing:
 `npm install --save-dev mocha chai`
+
+## Running the bot
+
+Once you installed all of the necessary node modules, within the *csbot* directory run the command:
+`node .`
+You should receive a console message saying *"The bot is online!"*
+
+## Running test files
+
+Add test files to the *tests* directory and run the command:
+`npm test`
+
+## Integrating the bot to your Discord Server
+
+[Link to authorize the bot](https://discord.com/api/oauth2/authorize?client_id=755569836977029211&permissions=22528&scope=bot)
+
+To start, send a message saying `!man` to get a listing of all the bot commands.
