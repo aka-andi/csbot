@@ -7,16 +7,19 @@ A *Discord* bot that prepares computer science students for their career by prov
 ## Installation
 
 First, install Discord.js:
-`npm install discord.js`
+`npm i discord.js`
 
 Then, install csv-parse:
 `npm i csv-parse`
 
-Then, install Puppeteer:
-`npm install --save puppeteer`
+Then, install cheerio:
+`npm i cheerio`
+
+Then, install axios:
+`npm i axios`
 
 Lastly, install Mocha and Chai for testing:
-`npm install --save-dev mocha chai`
+`npm i --save-dev mocha chai`
 
 ## Running the bot
 
