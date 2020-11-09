@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const scrape = require('./../opportunities');
+const scrape = require('./../opportunities').default;
 var alertsOn = false;
 var interval;
 function toggleStatus() {
