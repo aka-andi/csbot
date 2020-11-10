@@ -37,7 +37,7 @@ module.exports = {
                 catch (err) {
                     console.log(err);
                 }
-            }, 10000); // 10 second intervals
+            }, 5000); // 5 second intervals
         }
     }
 }
