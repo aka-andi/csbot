@@ -13,6 +13,7 @@ function filter(data) {
     data.forEach(element => {
         if ((element.link.indexOf("rc/clk?") > 0) && !(storedData.some(e => e.link === element.link))) {
             updates.push(element);
+            storedData.push(element);
         }
     });
     return updates;
