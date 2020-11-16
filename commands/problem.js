@@ -22,7 +22,7 @@ fs.createReadStream(path.join('data', 'leetcode.csv'))
 module.exports = {
   name: 'problem',
   description: "problem command",
-  execute(message, args) {
+  execute(message) {
     const random = Math.floor(Math.random()* Math.floor(csvData.length));
     const problem = {
       

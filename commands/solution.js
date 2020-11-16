@@ -1,7 +1,7 @@
 module.exports = {
     name: 'solution',
     description: "solution command",
-    execute(message, args) {
+    execute(message) {
         const problem = require('./problem.js')
         if (problem.solution != undefined) {
             message.channel.send({

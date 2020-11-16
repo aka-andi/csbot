@@ -1,7 +1,7 @@
 module.exports = {
     name: 'answer',
     description: "answer command",
-    execute(message, args) {
+    execute(message) {
         const trivia = require('./trivia.js')
         if (trivia.question != undefined) {
             message.channel.send({

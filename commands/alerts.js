@@ -13,7 +13,7 @@ function toggleStatus() {
 }
 
 // Upon command invocation, toggle the status and if ON, send alerts from the scraper
-function execute(message, args) {
+function execute(message) {
     alertsOn = toggleStatus()
     if (!alertsOn) { // stop scheduled messages when OFF
         clearInterval(interval);

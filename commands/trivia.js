@@ -27,7 +27,7 @@ fs.createReadStream(path.join('data', 'trivia.csv'))
 module.exports = {  
   name: 'trivia',
   description: "trivia command",
-  execute(message, args) {
+  execute(message) {
     //console.log(csvData[8][1]);
     //get random question
     const random = Math.floor(Math.random()* Math.floor(csvData.length));

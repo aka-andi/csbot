@@ -1,7 +1,7 @@
 module.exports = {
     name: 'man',
     description: "man command",
-    execute(message, args) {
+    execute(message) {
         message.channel.send({
             embed: {
                 title: "TARS Commands",

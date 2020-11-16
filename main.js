@@ -19,7 +19,7 @@ bot.on('message', message => {
     const command = args.shift().toLowerCase();
     if (!bot.commands.has(command)) return;
     try {
-        bot.commands.get(command).execute(message, args);
+        bot.commands.get(command).execute(message);
     } catch (error) {
         message.reply('There was an error trying to execute that command!');
     }
