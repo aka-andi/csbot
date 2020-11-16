@@ -45,9 +45,7 @@ function execute(message) {
 module.exports = {
     name: 'alerts',
     description: "alert command",
-    getStatus() {
-        return alertsOn;
-    },
+    status: alertsOn,
     toggleStatus: toggleStatus,
     execute: execute
 }
