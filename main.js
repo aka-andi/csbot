@@ -1,3 +1,4 @@
+
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
@@ -17,6 +18,7 @@ bot.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
+    if (!bot.commands.has(command)) return;
     try {
         bot.commands.get(command).execute(message);
     } catch (error) {
