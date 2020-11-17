@@ -18,7 +18,7 @@ bot.on('message', message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     try {
-        bot.commands.get(command).execute(message);
+        bot.commands.get(command).execute(message, args);
     } catch (error) {
         message.reply('There was an error trying to execute that command!');
     }
