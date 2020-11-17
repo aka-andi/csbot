@@ -4,19 +4,27 @@
   "description": "CS321 Team 8 project",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "mocha tests/"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aka-andi/csbot.git"
+      "type": "git",
+      "url": "git+https://github.com/aka-andi/csbot.git"
   },
   "author": "Brenda Henriquez, Andi Motas, Firaol Tolessa",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aka-andi/csbot/issues"
+      "url": "https://github.com/aka-andi/csbot/issues"
   },
   "homepage": "https://github.com/aka-andi/csbot#readme",
   "dependencies": {
-    "discord.js": "^12.3.1"
+      "axios": "^0.21.0",
+      "cheerio": "^1.0.0-rc.3",
+      "csv-parse": "^4.14.0",
+      "discord.js": "^12.4.1",
+      "puppeteer": "^5.4.1"
+  },
+  "devDependencies": {
+      "chai": "^4.2.0",
+      "mocha": "^8.2.1"
   }
 }
